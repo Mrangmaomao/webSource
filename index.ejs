@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN"  class="no-js">
+
+<head>
+    <title>js公共函数测试</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.css[0] %>">
+</head>
+
+<body>
+<!--[if IE]>
+<div class="fixed-top">系统检测到您的浏览器版本过低，为了更好的体验，请使用谷歌、火狐等浏览器</div>
+<![endif]-->
+
+    <div id="app"></div>
+<% for(let chk in htmlWebpackPlugin.files.chunks){
+
+    let chunk=htmlWebpackPlugin.files.chunks[chk];
+
+    if(chk.startsWith('ie9') ){
+
+    %>
+    <!--[if lte IE 9]>
+         <script type="text/javascript" src="<%= chunk.entry %>"></script>
+    <![endif]-->
+    <%
+    } else if(!chk.startsWith('fix_') ){
+    %>
+     <script type="text/javascript" src="<%= chunk.entry %>"></script>
+    <%
+    }
+} %>
+</body>
+</html>
