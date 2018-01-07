@@ -1,4 +1,4 @@
-export default class Dates {
+class Dates {
     onlyDate: Date;
     /**
      *  get now time or anything time
@@ -39,3 +39,5 @@ export default class Dates {
         return format;
     }
 }
+const date = new Dates();
+export default date;

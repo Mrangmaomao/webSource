@@ -1,4 +1,4 @@
-export default class cookies {
+class cookies {
     /**
      * 
      * @desc 根据name读取cookie
@@ -32,3 +32,5 @@ export default class cookies {
         this.setCookie(name, '1', -1);
     }
 }
+const cookie  = new cookies();
+export default cookie;

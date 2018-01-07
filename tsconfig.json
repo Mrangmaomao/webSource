@@ -6,6 +6,7 @@
     "sourceMap": true,
     "module": "commonjs",
     "experimentalDecorators": true,
+    "lib" : ["dom","es2015"], // 如果不配置这个 无法使用 promise
     "outDir": "out"
   },
   "exclude": [

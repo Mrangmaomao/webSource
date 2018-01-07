@@ -6,7 +6,7 @@
   "scripts": {
     "init": "rimraf dist && webpack --progress --hide-modules",
     "build": "rimraf dist && webpack --progress --hide-modules",
-    "dev": "npm run init && webpack-dev-server --content-base ./dist --inline --hot  --compress --colors --watch --history-api-fallback --port 1010"
+    "dev": "npm run init && webpack-dev-server --content-base ./dist --inline --hot  --compress --colors --watch --history-api-fallback --port 3000"
   },
   "author": "",
   "license": "ISC",
