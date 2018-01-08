@@ -1,5 +1,5 @@
 class Computed {
-    abs( x : number ) { // 求绝对值 @return number
+    abs( x : number ) { // 求正负数 @return number
         if ( x >= 0) {
             return x;
         } else {
